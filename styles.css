@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--body);
+    font-size: large;
+    
+}
+
+:root
+{
+    --main-Backroundcolour: #f8f1ff;
+    --secondary-color: #8b8fddac;
+    --body: #ebecf2;
+    --navbar: #FFFFFF;
+    --font-family: 'Unbounded',' sans-serif';
+    --extra: #0f228d;
+   
+}
+
+img {
+    object-fit: cover;
+     width: 200px;
+     height: 290px;
+     border-radius: 10px;
+}
+
+
+
+
+.navigationbar{
+  background-color: var(--navbar);
+  width: 100%;
+  height: 50px;
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  text-align: center;
+  
+  
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    list-style: none;
+    margin-bottom: 15px;
+    color: var(--extra);
+     text-align: center;
+     margin: auto;
+}
+
+button{
+    width: 30px;
+    height: 25px;
+}
+
+.myprojects{
+    display: flex;
+   flex-direction: column;
+   justify-items: right;
+    background-color: var(--main-Backroundcolour);
+    gap: 80px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--secondary-color);
+    text-align: right;
+     cursor: pointer;
+    transition: box-shadow 0.6s ease, transform 0.6s ease;
+}
+
+
+.myprojects:hover {
+  box-shadow: 10px 10px 20px #0f228d;
+  transform: translateY(-2px); 
+}
+
+.maininfo{
+     display: flex;
+   flex-direction: column;
+    background-color: var(--secondary-color);
+    gap: 80px;
+    margin: 10px;
+     padding: 20px;
+     border-radius: 15px;
+     color: var(--navbar);
+     cursor: pointer;
+    transition: box-shadow 0.6s ease, transform 0.6s ease;
+}
+
+
+.maininfo:hover {
+  box-shadow: 10px 10px 20px #0f228d;
+  transform: translateY(-2px); 
+}
+
+
+.p1{
+    color: var(--extra);
+    font-weight: bold;
+    font-size: 50px;
+}
