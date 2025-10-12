@@ -15,20 +15,26 @@ body{
 
 :root
 {
-    --main-Backroundcolour: #f8f1ff;
-    --secondary-color: #8b8fddac;
-    --body: #ebecf2;
+    --main-Backroundcolour: #dae7f8;
+    --secondary-color: #15919872;
+    --body: #d7efdd83;
     --navbar: #FFFFFF;
     --font-family: 'Unbounded',' sans-serif';
-    --extra: #0f228d;
+    --extra: #187964;
+    --blur: 1rem;
+    --bg: #000000;
+     --clr-1: #00c2ff;
+     --clr-2: #1de473;
+     --clr-3: #c18ee8;
+     --clr-4: #4c7fff;
    
 }
 
 img {
     object-fit: cover;
-     width: 200px;
+     width: 300px;
      height: 290px;
-     border-radius: 10px;
+     border-radius: 20px;
 }
 
 
@@ -50,7 +56,7 @@ img {
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     height: auto;
     margin-left: 10px;
     margin-right: 10px;
@@ -93,7 +99,7 @@ button{
 
 
 .myprojects:hover {
-  box-shadow: 10px 10px 20px #0f228d;
+  box-shadow: 10px 10px 20px var(--extra);
   transform: translateY(-2px); 
 }
 
@@ -112,7 +118,7 @@ button{
 
 
 .maininfo:hover {
-  box-shadow: 10px 10px 20px #0f228d;
+  box-shadow: 10px 10px 20px var(--extra);
   transform: translateY(-2px); 
 }
 
@@ -121,4 +127,107 @@ button{
     color: var(--extra);
     font-weight: bold;
     font-size: 50px;
+    margin-top: 40px;
+    margin-left: 35px;
 }
+
+.Favouritetitle {
+  background-color: var(--navbar);
+  border-radius: 50px;
+  text-align: center;
+}
+
+.Traits {
+  margin-top: 35px;
+  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 30px;
+}
+
+ @keyframes typing {
+    0%, 10%   { content: "I"; }
+    10%, 20%  { content: "IN"; }
+    20%, 30%  { content: "INFJ"; }
+
+    30%, 40%  { content: "AUTH"; }
+    40%, 50%  { content: "AUTHEN"; }
+    50%, 60%  { content: "AUTHENTIC"; }
+
+    60%, 70%  { content: "SOFT"; }
+    70%, 80%  { content: "SOFTWARE"; }
+    80%, 90%  { content: "SOFTWARE DEVELOPER"; }
+
+    90%, 100% { content: ""; }
+  }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.AuraTraits {
+  --extra: currentcolor;
+}
+
+.AuraTraits::before {
+  content: "";
+  animation: typing 10.5s infinite;
+}
+
+.AuraTraits::after {
+  content: "";
+  border-right: 1px solid var(--clr-4);
+  animation: blink 0.2s linear infinite;
+}
+
+.AuraTraits.thick::after {
+  border-right: 1ch solid var(--clr-3);
+}
+
+.AuraTraits.nocaret::after {
+  border-right: 0;
+}
+
+
+ .LightDarkMode input {
+    opacity: 0;
+    width: 50px;
+    height: 20px;
+  }
+
+  
+  .LightDarkMode {
+   position: relative;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    width: 50px;
+    height: 20px;
+
+  }
+
+  
+  .LightDarkMode:before {
+     position: absolute;
+    content: "";
+    height: 15px;
+    width: 20px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  
+  input:checked + .LightDarkMode {
+    background-color: #4CAF50;
+  }
+
+  input:checked + .LightDarkMode:before {
+    transform: translateX(28px);
+  }
+
