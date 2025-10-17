@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
 * {
   margin: 0;
@@ -11,16 +11,17 @@ body{
     background-color: var(--body);
     font-size: large;
     
+    
 }
 
 :root
 {
-    --main-Backroundcolour: #dae7f8;
-    --secondary-color: #15919872;
-    --body: #d7efdd83;
+    --main-Backroundcolour: #0e6c49c0;
+    --secondary-color: #e1e39f;
+    --body: #e3f49f29;
     --navbar: #FFFFFF;
-    --font-family: 'Unbounded',' sans-serif';
-    --extra: #187964;
+    --font-family: 'Aboreto';
+    --extra: #06401f;
     --blur: 1rem;
     --bg: #000000;
      --clr-1: #00c2ff;
@@ -29,6 +30,10 @@ body{
      --clr-4: #4c7fff;
    
 }
+
+
+
+
 
 img {
     object-fit: cover;
@@ -40,9 +45,9 @@ img {
 
 
 
-.navigationbar{
+nav {
   background-color: var(--navbar);
-  width: 100%;
+  width: auto;
   height: 50px;
   margin: 10px;
   padding: 20px;
@@ -54,14 +59,17 @@ img {
   
 }
 
-.container{
+.container2{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    height: auto;
-    margin-left: 10px;
-    margin-right: 10px;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    width: auto;
+    height: 50%;
+    margin: auto;
     padding: 10px;
-    gap: 10px;
+    gap: 40px;
+    
+    
 }
 
 
@@ -82,33 +90,35 @@ button{
     height: 25px;
 }
 
-.myprojects{
+/* .myprojects{
     display: flex;
-   flex-direction: column;
+   flex-direction: row;
    justify-items: right;
     background-color: var(--main-Backroundcolour);
     gap: 80px;
     margin: 10px;
     padding: 20px;
     border-radius: 15px;
-    color: var(--secondary-color);
+    color: var(--extra);
     text-align: right;
      cursor: pointer;
     transition: box-shadow 0.6s ease, transform 0.6s ease;
-}
+ }  */
 
 
-.myprojects:hover {
+/*.myprojects:hover {
   box-shadow: 10px 10px 20px var(--extra);
   transform: translateY(-2px); 
-}
+}  */
 
 .maininfo{
      display: flex;
    flex-direction: column;
+   width: 100%;
+   height: 100%;
     background-color: var(--secondary-color);
     gap: 80px;
-    margin: 10px;
+    margin: 15px;
      padding: 20px;
      border-radius: 15px;
      color: var(--navbar);
@@ -126,16 +136,22 @@ button{
 .p1{
     color: var(--extra);
     font-weight: bold;
-    font-size: 50px;
-    margin-top: 40px;
-    margin-left: 35px;
+    font-size: 70px;
+    text-align: left;
+    margin-left: 50px;
 }
 
-.Favouritetitle {
+
+
+
+/*.Favouritetitle {
+  flex-direction: row;
   background-color: var(--navbar);
-  border-radius: 50px;
-  text-align: center;
-}
+  width: auto;
+  height: auto;
+  
+  
+ } */
 
 .Traits {
   margin-top: 35px;
@@ -143,7 +159,7 @@ button{
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-size: 30px;
+  font-size: 65px;
 }
 
  @keyframes typing {
@@ -168,7 +184,7 @@ button{
 }
 
 .AuraTraits {
-  --extra: currentcolor;
+  --main-Backroundcolour: currentcolor;
 }
 
 .AuraTraits::before {
@@ -178,12 +194,12 @@ button{
 
 .AuraTraits::after {
   content: "";
-  border-right: 1px solid var(--clr-4);
+  border-right: 1px solid var(--main-Backroundcolour);
   animation: blink 0.2s linear infinite;
 }
 
 .AuraTraits.thick::after {
-  border-right: 1ch solid var(--clr-3);
+  border-right: 1ch solid var(--main-Backroundcolour);
 }
 
 .AuraTraits.nocaret::after {
@@ -231,3 +247,38 @@ button{
     transform: translateX(28px);
   }
 
+.firstPagecontent{
+   display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: auto;
+    height: auto;
+    margin: 35px;
+    padding: 15px;
+    background-color: var(--body);
+    border-radius: 15px;
+
+  
+
+}
+
+.whoamI{
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+  height: auto;
+  padding: 15px;
+  line-height: 25px;
+  font-size: medium;
+  font-weight: bold;
+  
+}
+
+.Mainimg{
+ display: flex;
+ margin-left: 50%;
+ border-radius: 30px;
+  
+}
