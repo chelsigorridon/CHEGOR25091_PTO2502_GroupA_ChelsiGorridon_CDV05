@@ -18,14 +18,17 @@ export class landingPage extends HTMLElement {
       <div class="container2">
 
         <div class="maininfo">
-          <p class="p1">Hi, <br>
-            The Names <br>
-            Chelsi Jaime Gorridon </p>
+          <p class="p1">HI, <br>
+            THE NAMES <br>
+            CHELSI JAIME GORRIDON </p>
+            <button class="Contact button" href="Aboutme.html" > CONTACT ME  </button>
 
           <div class="Traits">
             <div class="AuraTraits"></div>
             <div class="AuraTraits"></div>
             <div class="AuraTraits"></div>
+           
+
           </div>
         </div>
 

@@ -17,11 +17,9 @@ export class navBar extends HTMLElement {
      <div>
       <nav class="navigationbar"> 
         <ul>
-          <button class="LightDarkMode"></button>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="">Resume</a></li>
-          <li><a href="">Contact Me</a></li>
+          <li><a class="navbtn" href="index.html">Home</a></li>
+          <li ><a class="navbtn" href="about.html">About Me</a></li>
+          <li><a class="navbtn" href="projects.html">Projects</a></li>
         </ul>
       </nav>
 

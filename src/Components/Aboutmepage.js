@@ -14,11 +14,12 @@ export class aboutMePage extends HTMLElement {
     firstPage.classList.add("firstPage");
 
    firstPage.innerHTML = `
-
+  
    <div class="firstPagecontent">
-
+   <div class="Headingabout">
+  <h1>WHO AM I? </h1>
    <img class="Mainimg" src="img/image.png" alt="Picture of Me">
-
+   </div>
     <div class="whoamI">
 
           <div class="explanation">
