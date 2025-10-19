@@ -62,10 +62,6 @@ img:hover {
   }
 }
 
-  
-
-
-
 
 nav {
   background-color: var(--navbar);
@@ -75,19 +71,26 @@ nav {
   padding: 20px;
   display: flex;
   flex-direction: row;
-  border-radius: 15px;
+  border-radius: 5px;
   text-align: center; 
 }
 
-.container2{
-    display: grid;
-    grid-template-rows: 1fr ;
-    width: auto;
-    height: 50%;
-    margin: auto;
-    padding: 10px;
-    gap: 40px;
-   
+
+/* Navbar */
+
+
+.navbtn {
+  color: var(--main-Backroundcolour);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+}
+
+.navbtn:hover {
+
+  text-shadow: 0 0 10px #0ba473, 0 0 20px #0ba473, 0 0 30px #0ba473;
+  color: var(--main-Backroundcolour); 
 }
 
 
@@ -104,37 +107,35 @@ ul{
      margin: auto;
 }
 
+
+
+
+.container2{
+    display: grid;
+    grid-template-rows: 1fr ;
+    width: auto;
+    height: 50%;
+    margin: auto;
+    padding: 10px;
+    gap: 40px;
+   
+}
+
+
+
 button{
     width: 30px;
     height: 25px;
+    padding: 5px;
 }
 
-/* .myprojects{
-    display: flex;
-   flex-direction: row;
-   justify-items: right;
-    background-color: var(--main-Backroundcolour);
-    gap: 80px;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 15px;
-    color: var(--extra);
-    text-align: right;
-     cursor: pointer;
-    transition: box-shadow 0.6s ease, transform 0.6s ease;
- }  */
 
-
-/*.myprojects:hover {
-  box-shadow: 10px 10px 20px var(--extra);
-  transform: translateY(-2px); 
-}  */
 
 .maininfo{
      display: flex;
    flex-direction: column;
    width: 90%;
-   height: 100%;
+    height: auto;
     background-color: var(--secondary-color);
     gap: 80px;
     margin: auto;
@@ -182,25 +183,9 @@ button{
     margin-left: 50px;
 }
 
-h1{
-  background-color: #FFFFFF;
-  border-radius: 15px;
-}
 
-
-
-
-/*.Favouritetitle {
-  flex-direction: row;
-  background-color: var(--navbar);
-  width: auto;
-  height: auto;
-  
-  
- } */
 
 .Traits {
-  margin-top: 35px;
   margin-left: 35px;
   display: flex;
   flex-direction: column;
@@ -209,9 +194,9 @@ h1{
 }
 
  @keyframes typing {
-    0%, 10%   { content: "I"; }
-    10%, 20%  { content: "IN"; }
-    20%, 30%  { content: "INFJ"; }
+    0%, 10%   { content: "CR"; }
+    10%, 20%  { content: "CREA"; }
+    20%, 30%  { content: "CREATIVE"; }
 
     30%, 40%  { content: "AUTH"; }
     40%, 50%  { content: "AUTHEN"; }
@@ -253,59 +238,22 @@ h1{
 }
 
 
-/* .LightDarkMode input {
-    opacity: 0;
-    width: 50px;
-    height: 20px;
-  }
-
-  
-  .LightDarkMode {
-   position: relative;
-    cursor: pointer;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 34px;
-    width: 50px;
-    height: 20px;
-
-  }
-
-  
-  .LightDarkMode:before {
-     position: absolute;
-    content: "";
-    height: 15px;
-    width: 20px;
-    left: 3px;
-    bottom: 2.5px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-  }
-
-  
-  input:checked + .LightDarkMode {
-    background-color: #4CAF50;
-  }
-
-  input:checked + .LightDarkMode:before {
-    transform: translateX(28px);
-  }*/
-
 /* About Me page */
 
 .firstPagecontent{
    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: auto;
-    height: auto;
-    margin: 35px;
-    padding: 15px;
+    grid-template-rows: 1fr;
+    width: 90%;
+    height: 30%;
+    gap: 35px;
+    margin: auto;
+    padding: 30px;
     background-color: var(--clr-1);
     border-radius: 15px;
-
+    position: relative;
+    z-index: 1;
 }
+   
 
 .firstPagecontent::before {
   content: "";
@@ -319,22 +267,14 @@ h1{
   z-index: 0;
 }
 
-
-.firstPagecontent  {
-  position: relative;
-  z-index: 1;
-}
-
-
-
 .Headingabout {
   display: flex;
-  flex-direction: column;  
+  flex-direction: row;  
   gap: 30px;
   margin: auto;
   padding: 15px;
   text-align: center;
-  width: auto;
+  width: 100%;
   background-color: var(--secondary-color);
   border-radius: 15px;
 }
@@ -349,6 +289,7 @@ h1{
   width: 60%;
   height: auto;
   padding: 15px;
+   margin: 35px;
   line-height: 25px;
   font-size: medium;
   font-weight: bold;
@@ -376,10 +317,66 @@ h1{
 }
 
 .Mainimg{
- display: flex;
- border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border-radius: 30px;
+   align-items: center;
+
+}
+
+h1{
+  background-color: #FFFFFF;
+  border-radius: 15px;
+
+}
+
+.headingone{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  margin: 20px;
+  padding: 10px;
+  gap: 5px;
   
 }
+
+.social-links{
+  display: flex;
+  flex-direction: column;
+   gap: 5px;
+   margin: 10px;
+}
+
+.sociallinksicons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+
+}
+
+
+.sociallinksimg{
+   width: 35px;
+   height: 30px;
+  margin: 15px;
+}
+
+#contact-section{
+scroll-behavior: smooth;
+}
+
+.contactinfo{
+  display: flex;
+  flex-direction: column;
+  line-height: 5px;
+  margin: 10px;
+}
+
+
 
 
 /* Projects Page styling  */
@@ -459,9 +456,9 @@ h1{
 .secondPagecontent  {
   position: relative;
   z-index: 1;
+}
 
-
-h3 {
+ .heading3 {
   margin-bottom: 10px;
   background-color: #FFFFFF;
   padding: 5px;
@@ -485,20 +482,202 @@ a{
   color: black;
 }
 
-/* Navbar */
+/* Contact Me Button */
 
+.buttoncontact {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 5%;
 
-.navbtn {
-  color: var(--main-Backroundcolour);
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  
 }
 
-.navbtn:hover {
 
-  text-shadow: 0 0 10px #0ba473, 0 0 20px #0ba473, 0 0 30px #0ba473;
-  color: var(--main-Backroundcolour); 
+button{
+   width: auto;
+  height: 45px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--navbar);
+  background-color: var(--main-Backroundcolour);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 100;
 }
+
+
+.button:hover {
+  background-color: var(--extra);
 }
+
+/* ===== Mobile (small screens) ===== */
+
+@media (max-width: 667px) {
+  .container2 {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    ;
+  }
+
+  .p1 {
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+  }
+
+  .Traits {
+   display: none;
+  }
+
+
+  .AuraTraits {
+    display: none;
+  }
+
+
+  .buttoncontact button {
+    width: auto;
+    font-size: 25px;
+    margin: auto;
+  }
+
+.navigationbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  /* Show hamburger icon */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Hide menu by default */
+  .navigationbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--main-Backroundcolour);
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid var(--accent-colour);
+  }
+
+  /* Show when menu is active */
+  .navigationbar ul.active {
+    display: flex;
+  }
+
+  .navigationbar li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .navbtn {
+    display: block;
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+.Mainimg {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .headingone {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .Mainimg img {
+    width: 250px;
+    margin-bottom: 20px;
+  }
+
+  .explanation {
+    text-align: center;
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .sociallinksicons {
+    gap: 15px;
+  }
+}
+
+/* ========== MOBILE VIEW (480px and below) ========== */
+@media (max-width: 480px) {
+  .firstPagecontent {
+    margin: auto;
+    width: 150%;
+  }
+
+  .headingone {
+    font-size: 1.7rem;
+   
+    
+    
+  }
+
+  .Mainimg img {
+    width: auto;
+    margin: auto;
+    
+  }
+
+  .explanation {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .contactinfo h3 {
+    font-size: 0.9rem;
+  }
+
+  .sociallinksimg {
+    width: 35px;
+    height: 35px;
+  }
+
+
+  .secondPagecontent{
+    width: 160%;
+  }
+
+ .LineofProjects {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    width: auto;
+  }
+
+  .Projects {
+    width: auto; 
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

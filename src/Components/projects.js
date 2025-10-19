@@ -24,7 +24,7 @@ export class projectsPage extends HTMLElement {
         <img class="Projectimg" src="img/desktop_all_genres_dropdown.png" alt="Picture of Project 1">
 
         <div class="projectstext">
-          <h3>Podcast App</h3>
+          <h3 class="heading3" >Podcast App</h3>
           <p>
             The Podcast App is a web application that displays a variety of podcasts across different genres. 
             On the landing page, all podcasts are presented as cards showing an image, title, genres, number of seasons, and updated date.
@@ -40,7 +40,7 @@ export class projectsPage extends HTMLElement {
         <img class="Projectimg" src="img/JSL01-Desktop.png" alt="Picture of Project 2">
 
         <div class="projectstext">
-          <h3>Kanban App</h3>
+          <h3  class="heading3" >Kanban App</h3>
           <p>
             A Task Board with Local Storage and Task Creation is a simple web app that allows users to create tasks with a title, description, and status, and then visually display those tasks in columns like "To Do", "In Progress", and "Done".
             The app uses the browser's local storage to save the tasks so that they remain even after the page is refreshed.

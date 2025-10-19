@@ -16,6 +16,9 @@ export class navBar extends HTMLElement {
      
      <div>
       <nav class="navigationbar"> 
+
+      <div class="menu-toggle" id="menu-toggle"></div>
+
         <ul>
           <li><a class="navbtn" href="index.html">Home</a></li>
           <li ><a class="navbtn" href="about.html">About Me</a></li>

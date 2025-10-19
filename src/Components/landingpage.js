@@ -21,7 +21,10 @@ export class landingPage extends HTMLElement {
           <p class="p1">HI, <br>
             THE NAMES <br>
             CHELSI JAIME GORRIDON </p>
-            <button class="Contact button" href="Aboutme.html" > CONTACT ME  </button>
+
+            <div class="buttoncontact">
+            <button onclick="window.location.href='about.html#contact-section'" > CONTACT ME </button> 
+            </div>
 
           <div class="Traits">
             <div class="AuraTraits"></div>
