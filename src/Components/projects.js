@@ -16,6 +16,9 @@ export class projectsPage extends HTMLElement {
    secondPage.innerHTML = `
      
      <div class="secondPagecontent">
+ 
+      <h1 class="headingone">PROJECTS</h1>
+
   <div class="LineofProjects">
 
     <!-- Project 1 -->

@@ -20,8 +20,8 @@ export class aboutMePage extends HTMLElement {
    <div class="Headingabout">
    
   <div  class="Mainimg"  >
-  <h1 class="headingone"> WHO AM I? </h1>
-   <img src="img/image.png" alt="Picture of Me">
+  <h1 class="headingone"> WHAT CAN I DO? </h1>
+   
  
     <div class="whoamI">
 
@@ -35,37 +35,6 @@ export class aboutMePage extends HTMLElement {
  
            </div>
 
-             <div class="social-links" >
-
-             <div class="contactheading" id="contact-section"  > 
-             <h1 class="headingone" >CONTACT ME </h1>
-             </div>
-
-           <div>
-           <button onclick="window.location.href='mailto:chelsijaimegorridon@gmail.com'">Email Me</button>
-           </div>
-
-           <br>
-
-           <div class="contactinfo">
-           <h3>Email:chelsijaimegorridon@gmail.com </h3>
-           <br>
-           <br>
-           <br>
-           <br>
-           <br>
-           <h3>Phone Number:083 295 7278</h3>
-            </div>
-
-           <div class="sociallinksicons">
-            <a href="https://www.linkedin.com/in/chelsi-gorridon-54a09621a/" target="_blank" aria-label="LinkedIn">
-           <img class="sociallinksimg" src="img/linkedin.jpg" alt="LinkedIn Logo"> </a>
-           <a href="https://github.com/chelsigorridon" target="_blank" aria-label="GitHub">
-         <img class="sociallinksimg"  src="img/github.png" alt="GitHub Logo"> </a>
-           <a href="https://www.instagram.com/chelsi_jaime_gorridon/" target="_blank" aria-label="Instagram">
-           <img class="sociallinksimg"   src="img/instagram.png" alt="Instagram Logo" </a>
-
-           </div>
            
 
            </div>
