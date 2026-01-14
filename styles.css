@@ -40,8 +40,12 @@ body {
 .navigation {
   padding: 2rem 0;
   border-bottom: 2px solid var(--pink);
-  
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* keeps it above other content */
+  background-color: var(--bg-black) /* important so content doesn't show through */
 }
+  
 
 .navigation ul {
   display: flex;
@@ -66,13 +70,27 @@ body {
   text-shadow: var(--neon-glow);
 }
 
+
+.navigation ul.active {
+  display: flex;
+}
+
 /* ====== SECTIONS ====== */
 section {
-  padding: 4rem 0;
+  padding: 1rem 0;
+  margin: 1rem 0;
   text-align: center;
 }
 
 /* ====== HEADINGS ====== */
+
+.mainheading {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 79, 216, 0.4);
+  
+}
+
 h1 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
@@ -81,13 +99,13 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.0rem;
+  margin-bottom: 1.0rem;
 }
 
 /* ====== HOME SECTION ====== */
 .section1 h2 {
-  font-size: 2.4rem;
+  font-size: 3.0rem;
   line-height: 1.2;
   color: var(--neon-glow);
   
@@ -98,7 +116,7 @@ h2 {
 .stagger span {
   display: inline-block;
   opacity: 1; /* make visible for sliding */
-  animation: slide 1s ease-in-out infinite alternate;
+  animation: slide 2s ease-in-out infinite alternate;
 }
 
 .stagger span:nth-child(1) { animation-delay: 0s; }
@@ -120,10 +138,10 @@ h2 {
 }
 
 .profileimg {
-  width: 250px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50px;
+  width: 215px;
+  height: 215px;
+  object-fit:cover;
+  border-radius: 100px;
   border: 3px solid var(--pink);
   box-shadow: 0 0 10px rgba(255, 79, 216, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -140,6 +158,7 @@ p {
   margin: auto;
   font-size: 1.1rem;
   color: var(--pink-soft);
+  gap: 1rem;
 }
 
 /* ====== LISTS ====== */
@@ -175,11 +194,28 @@ section ul li:hover {
   text-shadow: var(--neon-glow);
 }
 
-/* ====== PROJECTS ====== */
+/* ====== PROJECTS & TECH STACK ====== */
+
+
+i {
+  color: var(--pink);
+  font-size: 3.5rem;
+}
+
+#Techstack ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center;
+  gap: 1.0rem;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+
 #Projects {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 1.5rem;
 }
 
 .project1,
@@ -193,10 +229,12 @@ section ul li:hover {
 }
 
 #Projects img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 12px;
+  width: 50%;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 50%;
   margin-top: 1rem;
+  object-fit: cover;
   border: 2px solid var(--pink);
   box-shadow: 0 0 20px rgba(255, 79, 216, 0.5);
   transition: box-shadow 0.3s ease;
@@ -247,20 +285,20 @@ a:hover {
   left: 10%;
   pointer-events: none; /* so it doesn’t block clicks */
   z-index: 0;       /* behind content */
-  animation: float 6s infinite alternate;
-  border-radius: 10px;
+  animation: float 3s infinite alternate;
+  border-radius: 55px;
 }
 
 .floating-gif2 {
   position: absolute;
-  width: 90px;      /* size of the GIF */
-  height: 90px;
-  top: 90%;         /* position on page */
+  width: 70px;      /* size of the GIF */
+  height: 70px;
+  top: 50%;         /* position on page */
   right: 10%;
   pointer-events: none; /* so it doesn’t block clicks */
   z-index: 0;       /* behind content */
-  animation: float 6s infinite alternate;
-  border-radius: 10px;
+  animation: float 3s infinite alternate;
+  border-radius: 50px;
 }
 
 
@@ -272,8 +310,8 @@ a:hover {
   display: flex;
   pointer-events: none; /* so it doesn’t block clicks */
   z-index: 0;       /* behind content */
-  animation: float 6s infinite alternate;
-  border-radius: 10px;
+  animation: float 3s infinite alternate;
+  border-radius: 55px;
 }
 
 @keyframes float {
@@ -294,22 +332,19 @@ a:hover {
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
 
+.navigation ul {
+  display: none;
+  flex-direction: column;
+}
+
+.navigation ul.active {
+  display: flex;
+}
+
  .menu-toggle {
     display: block;
     margin: 0 auto;
   }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
 
   h1 {
     font-size: 2.2rem;

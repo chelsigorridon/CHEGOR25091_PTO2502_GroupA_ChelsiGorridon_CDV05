@@ -1,5 +1,4 @@
 
-
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.navigation ul');
   const navItems = document.querySelectorAll('.navigation ul li a');
@@ -14,3 +13,8 @@
     });
   });
 
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+}
