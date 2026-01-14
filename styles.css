@@ -159,6 +159,7 @@ p {
   font-size: 1.1rem;
   color: var(--pink-soft);
   gap: 1rem;
+  margin-bottom: 30px;
 }
 
 /* ====== LISTS ====== */
@@ -278,13 +279,30 @@ a:hover {
 }
 
 /* ====== CONTACT SECTION ====== */
-#Contact ul li {
-  margin: 1rem 0;
-   display: flex;
-  align-items: center;
-  text-align: left;
-  gap: 6px; /* space between icon and text */
+#Contact {
+  text-align: center; /* center the section title and description */
 }
+
+#Contact ul {
+  display: flex;
+  flex-direction: column;  /* stack items vertically */
+  align-items: center;     /* center the entire list horizontally */
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+  max-width: 300px;        /* limits width of the contact block */
+}
+
+#Contact ul li {
+  display: flex;           /* icon + text inline */
+  align-items: center;     /* vertically center icon with text */
+  gap: 8px;                /* space between icon and text */
+  width: 100%;             /* fill the block so text lines up */
+  justify-content: flex-start; /* icon + text aligned to the left of the block */
+  margin-bottom: 12px;     /* space between each contact item */
+  font-size: 1rem;
+}
+
 
 /* ====== FROG GIFS ====== */
 
@@ -377,4 +395,21 @@ a:hover {
 .floating-gif5, .floating-gif2, .floating-gif  {
  visibility:hidden;
 }
+
+#Projects img {
+  width: 50%;
+  max-width: 170px;
+  height: 170px;
+  border-radius: 50%;
+
+}
+
+#Contact ul li {
+  margin: 1rem 0;
+   display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 6px; /* space between icon and text */
+}
+
 }
