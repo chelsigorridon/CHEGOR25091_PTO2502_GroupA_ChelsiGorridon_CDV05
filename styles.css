@@ -58,7 +58,7 @@ body {
 .navigation a {
   text-decoration: none;
   color: var(--bg-black);
-  font-size: 23px;
+  font-size: 20px;
   background-color: var(--pink-soft);
   border-radius: 25px;
   padding: 0.5rem ;
@@ -99,13 +99,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.0rem;
+  font-size: 1px;
   margin-bottom: 1.0rem;
 }
 
 /* ====== HOME SECTION ====== */
 .section1 h2 {
-  font-size: 3.0rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   color: var(--neon-glow);
   
@@ -149,7 +149,7 @@ h2 {
 
 .profileimg:hover {
   transform: scale(0.95);
-  box-shadow: var(--neon-glow);
+  
 }
 
 /* ====== PARAGRAPHS ====== */
@@ -200,15 +200,23 @@ section ul li:hover {
 i {
   color: var(--pink);
   font-size: 3.5rem;
+  
+}
+
+#Techstack li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #Techstack ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  justify-items: center;
+  align-items: center;
   gap: 1.0rem;
   max-width: 500px;
   margin: 2rem auto;
+  transition: box-shadow 0.3s ease;
 }
 
 
@@ -234,6 +242,7 @@ i {
   height: 300px;
   border-radius: 50%;
   margin-top: 1rem;
+  margin-bottom: 1.5rem;
   object-fit: cover;
   border: 2px solid var(--pink);
   box-shadow: 0 0 20px rgba(255, 79, 216, 0.5);
@@ -276,6 +285,8 @@ a:hover {
   text-align: left;
   gap: 6px; /* space between icon and text */
 }
+
+/* ====== FROG GIFS ====== */
 
 .floating-gif {
   position: absolute;
@@ -354,8 +365,16 @@ a:hover {
     font-size: 1.6rem;
   }
 
-  .navigation ul {
-    flex-direction: column;
-    gap: 1.5rem;
+  .mainheading {
+    font-size: 2.5rem;
   }
+  #Projects img {
+    width: 70%;
+    height: auto;
+  }
+
+
+.floating-gif5, .floating-gif2, .floating-gif  {
+ visibility:hidden;
+}
 }
