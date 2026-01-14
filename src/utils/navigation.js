@@ -12,9 +12,3 @@
       navLinks.classList.remove('active');
     });
   });
-
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-}
