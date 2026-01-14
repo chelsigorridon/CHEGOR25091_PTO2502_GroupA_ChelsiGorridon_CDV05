@@ -17,6 +17,7 @@ html {
   --pink: #ff4fd8;
   --pink-soft: #ff7ae6;
   --neon-glow: 0 0 8px #ff4fd8, 0 0 16px #ff4fd8, 0 0 32px #ff4fd8;
+  --frog-green: #81F064;
 }
 
 /* ====== BODY ====== */
@@ -39,6 +40,7 @@ body {
 .navigation {
   padding: 2rem 0;
   border-bottom: 2px solid var(--pink);
+  
 }
 
 .navigation ul {
@@ -46,12 +48,16 @@ body {
   justify-content: center;
   gap: 3rem;
   list-style: none;
+  
 }
 
 .navigation a {
   text-decoration: none;
-  color: var(--pink);
-  font-size: 1.1rem;
+  color: var(--bg-black);
+  font-size: 23px;
+  background-color: var(--pink-soft);
+  border-radius: 25px;
+  padding: 0.5rem ;
   transition: all 0.3s ease;
 }
 
@@ -71,6 +77,7 @@ h1 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   text-shadow: 0 0 10px rgba(255, 79, 216, 0.4);
+  color: var(--frog-green)
 }
 
 h2 {
@@ -80,32 +87,32 @@ h2 {
 
 /* ====== HOME SECTION ====== */
 .section1 h2 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   line-height: 1.2;
+  color: var(--neon-glow);
+  
 }
 
 /* ====== ANIMATION ====== */
 
 .stagger span {
   display: inline-block;
-  opacity: 0;
-  animation: riseIn 1s ease forwards;
+  opacity: 1; /* make visible for sliding */
+  animation: slide 1s ease-in-out infinite alternate;
 }
 
-.stagger span:nth-child(1) { animation-delay: 0.2s; }
-.stagger span:nth-child(3) { animation-delay: 0.6s; }
-.stagger span:nth-child(5) { animation-delay: 1s; }
+.stagger span:nth-child(1) { animation-delay: 0s; }
+.stagger span:nth-child(2) { animation-delay: 0.2s; }
+.stagger span:nth-child(3) { animation-delay: 0.4s; }
+.stagger span:nth-child(4) { animation-delay: 0.6s; }
+.stagger span:nth-child(5) { animation-delay: 0.8s; }
 
-@keyframes riseIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes slide {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(20px); }
 }
+
+
 
 /* ====== PROFILE IMAGE ====== */
 .profilepic {
@@ -118,12 +125,12 @@ h2 {
   object-fit: cover;
   border-radius: 50px;
   border: 3px solid var(--pink);
-  box-shadow: 0 0 25px rgba(255, 79, 216, 0.6);
+  box-shadow: 0 0 10px rgba(255, 79, 216, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profileimg:hover {
-  transform: scale(1.05);
+  transform: scale(0.95);
   box-shadow: var(--neon-glow);
 }
 
@@ -136,8 +143,26 @@ p {
 }
 
 /* ====== LISTS ====== */
+
 ul {
   list-style: none;
+  padding: 0;
+}
+
+#About ul {
+   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem rem; /* row gap | column gap */
+  max-width: 500px;
+  margin: 3rem auto;
+}
+
+ #About li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: flex-start;
+  margin: auto ;
 }
 
 section ul li {
@@ -208,10 +233,84 @@ a:hover {
 /* ====== CONTACT SECTION ====== */
 #Contact ul li {
   margin: 1rem 0;
+   display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 6px; /* space between icon and text */
+}
+
+.floating-gif {
+  position: absolute;
+   width: 110px;      /* size of the GIF */
+  height: 110px;;
+  top: 30%;         /* position on page */
+  left: 10%;
+  pointer-events: none; /* so it doesn’t block clicks */
+  z-index: 0;       /* behind content */
+  animation: float 6s infinite alternate;
+  border-radius: 10px;
+}
+
+.floating-gif2 {
+  position: absolute;
+  width: 90px;      /* size of the GIF */
+  height: 90px;
+  top: 90%;         /* position on page */
+  right: 10%;
+  pointer-events: none; /* so it doesn’t block clicks */
+  z-index: 0;       /* behind content */
+  animation: float 6s infinite alternate;
+  border-radius: 10px;
+}
+
+
+
+.floating-gif5 {
+  position: absolute;
+  width: 120px;      /* size of the GIF */
+  height: 120px;
+  display: flex;
+  pointer-events: none; /* so it doesn’t block clicks */
+  z-index: 0;       /* behind content */
+  animation: float 6s infinite alternate;
+  border-radius: 10px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-20px); }
+}
+
+/* MENU BUTTON */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ff4fd8;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
+
+ .menu-toggle {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+
   h1 {
     font-size: 2.2rem;
   }
