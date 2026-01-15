@@ -438,7 +438,37 @@ body.light  a {
   color: var(--bg-dark);
 }
 
+/* ====== ICONS ====== */
+
+
+/* 🌞 Light mode */
+body.light .sun-icon {
+  opacity: 1;
+  transform: scale(1);
+  
+}
+
+body.light .moon-icon {
+  opacity: 0;
+  transform: scale(0.8);
+  
+}
+
+/* 🌙 Dark mode */
+body.dark .moon-icon {
+  opacity: 1;
+  transform: scale(1);
+  
+}
+
+body.dark .sun-icon {
+  opacity: 0;
+  transform: scale(0.8);
+  
+}
+
 /* ====== RESPONSIVE ====== */
+
 @media (max-width: 768px) {
 
 .navigation ul {
