@@ -146,7 +146,7 @@ h2 {
   width: 215px;
   height: 215px;
   object-fit:cover;
-  border-radius: 100px;
+  border-radius: 50%;
   border: 3px solid var(--pink);
   box-shadow: 0 0 10px rgba(255, 79, 216, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -500,6 +500,38 @@ body.light  a {
   gap: 6px; /* space between icon and text */
 }
 
+.menu-toggle {
+  font-family: 'Stack Sans Notch', sans-serif;
+  background: var(--pink-soft);
+  border: none;
+  color: var(--bg-black);
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
 
+.theme-switch {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.navigation {
+  padding: 1rem 0;
+}
+
+.navigation ul {
+  gap: 1.5rem;
+  margin-left: 20px;
+}
 
 }
+
+
+
+
