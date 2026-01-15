@@ -14,10 +14,15 @@ html {
 /* ====== ROOT COLORS ====== */
 :root {
   --bg-black: #000000;
+  --bg-light: #fff8f8;
+  --bg-dark: #000000;
+  --theme-toggle: #FFFFFF;
   --pink: #ff4fd8;
   --pink-soft: #ff7ae6;
   --neon-glow: 0 0 8px #ff4fd8, 0 0 16px #ff4fd8, 0 0 32px #ff4fd8;
   --frog-green: #81F064;
+  --bg-Green: #0edb29;
+  /*#0edb29;*/
 }
 
 /* ====== BODY ====== */
@@ -43,7 +48,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000; /* keeps it above other content */
-  background-color: var(--bg-black) /* important so content doesn't show through */
+  background-color: var(--nav-bg) !important; /* important so content doesn't show through */
 }
   
 
@@ -349,6 +354,7 @@ a:hover {
 }
 
 /* MENU BUTTON */
+
 .menu-toggle {
   display: none;
   background: none;
@@ -356,6 +362,80 @@ a:hover {
   color: #ff4fd8;
   font-size: 2rem;
   cursor: pointer;
+}
+
+/* THEME TOGGLE */
+
+/* Toggle container */
+.theme-switch {
+  position: absolute;
+  right: 50px;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide default checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider style */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--pink);
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+/* Circle inside slider */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px; width: 20px;
+  left: 2px; bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+/* When checked */
+input:checked + .slider {
+  background-color: var(--frog-green);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* Theme styles */
+body.light {
+  background-color: var(--bg-light);
+  --nav-bg: var(--bg-light);
+}
+
+
+body.dark {
+  background-color: var(--bg-black);
+  --nav-bg: var(--bg-black);
+  
+}
+
+body.light p{
+  color: var(--bg-dark);
+}
+
+body.light h1{
+  color: var(--bg-Green);
+}
+
+
+body.light  a {
+  color: var(--bg-dark);
 }
 
 /* ====== RESPONSIVE ====== */
